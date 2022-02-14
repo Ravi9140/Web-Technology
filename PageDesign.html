@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Assignment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: white;
+            color:black;
+        }
+
+        header {
+            background-color: rgb(27, 19, 19);
+            color: white;
+        }
+
+        button {
+            background-color: rgb(27, 19, 19);
+            text-align: center;
+            border: none;
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        .butt {
+            background-color: rgb(27, 19, 19);
+            text-align: center;
+            border: none;
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        a:active {
+            background-color: gray;
+        }
+
+        nav {
+            display: inline-block;
+        }
+
+        form {
+            float: right;            
+        }
+
+        input[type=text] {
+            padding: 10px 5px;
+            margin: 6px 0;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            padding: 10px 5px;
+            margin: 6px 0;
+            box-sizing: border-box;
+        }
+
+        button.active {
+            background-color: black;
+            color: white;
+        }
+
+        div.upper {
+            display: flex;
+            width: 100vw;
+            height: 90vh;
+            padding: 10px;
+        }
+
+        div.lower {
+            display: flex;
+            width: 98vw;
+            height: 50vh;
+            padding: 10px;
+        }
+
+        div.lower .column {
+            float:left;
+            width: 23%;
+            height: 95%;
+            padding: 10px;
+            background-color: rgba(240, 234, 234, 0.884);
+        }
+
+        div.upper .left {
+            float:left;         
+            width: 25%;
+            height: 98%;
+            padding: 10px;
+
+        }
+        div.upper .middle {
+            display: flex;
+            flex-direction: column;
+            float:left;
+            width: 45%;
+            height: 98%;
+            padding: 10px;
+
+        }
+        div.upper .right {
+            float: left;       
+            width: 24%;
+            height: 80%;
+            padding: 10px;
+        }
+
+        .alert {
+            padding: 20px;
+            background-color: #ecada9;
+            color: #9c342c; 
+            font-size: 20px;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 25px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+
+        .mhorizon {
+            display: flex;                          
+            width: 95%;
+            height: 26%;
+            padding: 10px;
+        }
+
+        .leftinner {
+            display: flex;
+            float:left;                          
+            width: 20%;
+            height: 90%;
+            padding: 10px;
+        }
+
+        .rightinner {
+            float:left;
+            width:72%;
+            height: 90%;
+            padding: 10px;
+        }
+
+        .search {
+            padding: 10px 5px;
+            margin: 6px 10px;
+            box-sizing: border-box;
+            background-color: white;
+            color: black;
+            border:0.5px solid black;
+            width:100px
+        }
+
+        .blow {
+            background-color: white;
+            text-align: center;
+            border: 0.5px solid rgb(212, 199, 199);
+            color: black;
+           /* padding: 15px 10px;*/
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .foot {
+            text-decoration: none;
+            color: rgb(60, 147, 150);
+        }
+
+        .ltop {
+            height:50%;
+            background-color: rgba(240, 234, 234, 0.884);
+        }
+
+        .ldown {
+            height:50%;
+            background-color: rgba(240, 234, 234, 0.884);
+        }
+
+        .sidebar {
+            height: 70%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(240, 234, 234, 0.884);
+            text-align: left;
+        }
+
+
+        .sidebar a {
+            padding: 6px 8px 10px 6px;
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            display: block;
+            border:1px solid rgb(190, 181, 181);
+        }
+        
+        .sidebar a:hover {
+            color: #818181;
+        }   
+
+        .Pill {
+            float: right;
+            background-color: rgb(65, 62, 62);
+            border: none;
+            color: white;
+            padding: 0px 20px;
+            text-align: center;
+            text-decoration: none;
+            margin: 2px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .rupper {
+            height:40%;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+   </style>
+</head>
+<body>
+    <header>
+        <nav><a href="" class="butt">Logo</a></nav>
+        <nav><a href="" class="butt" style="background-color: gray;">Home</a></nav>
+        <nav><a href="" class="butt">About</a></nav>
+        <nav><a href="" class="butt">Products</a></nav>
+        <nav>
+            <div class="dropdown">
+            <button>Services</button> <i class="fa fa-caret-down"></i>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+            </div>
+
+        </nav>
+        
+
+        <form action="">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Password">
+            <input type="submit" value="Sign in">&nbsp;&nbsp;
+        </form>
+    </header>
+
+    <div class="upper">
+        <div class="left">
+            <div class="ltop">
+                <h1 style="font-size: 25px; border:0.5px rgb(167, 157, 157);"><i class="fa fa-random"></i> Completely Synergize</h1>
+                <div class="sidebar">
+                    <a href="#home">Resource Taxing</a>
+                    <a href="#services">Premier Niche Markets  <button class="Pill">New</button></a>
+                    <a href="#clients">Dynamically Innovate</a>
+                    <a href="#contact">Objectively Innovate</a>
+                    <a href="#contact">Proactively Envisioned</a>
+                  </div>
+            </div>
+
+            <div class="ldown">
+                <article class="lower">
+                        <h1 style="font-size: 25px; border:0.5px rgb(167, 157, 157);"><i class="fa fa-cog fa-lg" aria-hidden="true"></i> Dramatically Engage</h1>
+                        <p style="font-size: medium;">Phluorescently engage worldwide methodolgies with web-enabled technolgy. Interacticely coordinate proactive e-commerce via process centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentiaities.</p>
+                        <button class="blow" style="background-color: #dfd8d7;">Engage</button>
+                </article>
+            </div>
+
+        </div>
+
+        <div class="middle">
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <strong>Synergize: </strong> Seamlessly visualize quality intellectual capital!
+            </div>
+
+            <div class="mhorizon">
+                <div class="leftinner">
+                        <img src="be.png" height="120" width="120" style="border:0.5 px black;">
+                </div>
+                <div class="rightinner">
+                    <section>
+                        <b style="font-size:25px ;">Premier Niche Markets</b>
+                        <p style="font-size: medium;">Phluorescently engage worldwide methodolgies with web-enabled technolgy. Interacticely coordinate proactive e-commerce via process centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentiaities.</p>
+                    </section>
+                </div>
+            </div>
+
+            <div class="mhorizon">
+                <div class="leftinner">
+                    <img src="vision.jpg" height="120" width="120">
+                </div>
+                <div class="rightinner">
+                    <section>
+                        <b style="font-size:25px ;">Proactively Envisioned</b>
+                        <p style="font-size: medium;">Phluorescently engage worldwide methodolgies with web-enabled technolgy. Interacticely coordinate proactive e-commerce via process centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentiaities.</p>
+                    </section>
+                </div>
+            </div>
+
+            <div class="mhorizon">
+                <div class="leftinner">
+                    <img src="s.jpg" height="120" width="120">
+                </div>
+                <div class="rightinner">
+                    <section>
+                        <b style="font-size:25px ;">Completely Synergize</b>
+                        <p style="font-size: medium;">Phluorescently engage worldwide methodolgies with web-enabled technolgy. Interacticely coordinate proactive e-commerce via process centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentiaities.</p>
+                    </section>
+                </div>
+            </div>
+            
+        </div>
+        <div class="right">
+            <input type="text">
+            <button class="search">Search</button>
+
+            <div class="rupper">
+                <h1 style="font-size: 25px; border:0.5px rgb(167, 157, 157);"><i class="fa fa-tachometer fa-lg" aria-hidden="true"></i> Dramatically Engage</h1>
+                <p style="background-color:green; color: aliceblue; text-align: center;">100% proactively aligned</p>
+                <p style="background-color: rgb(60, 147, 150); color:aliceblue; text-align: center; width: 80%;">80% Objectively Innovated</p>
+                <p style="background-color: orangered; color:aliceblue; text-align: center; width: 45%;">45% Portalled</p>
+                <p style="background-color: red; color:aliceblue; text-align: center; width: 35%;">35% Done</p>
+
+            </div>
+            <div class="rlower">
+                <div class="column">
+                    <article class="lower">
+                        <h1 style="font-size: 25px;"><i class="fa fa-bullhorn fa-lg" aria-hidden="true"></i> Active Predomination</h1>
+                        <p style="font-size: 20px;">Proactively Envisioned multimedia based expertise and cross-media growth strategies.</p>
+                        <button class="blow">Resource</button>
+                        <button class="blow">Envision</button>
+                        <button class="blow">Niche</button>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lower">
+        <div class="column">
+            <article class="lower">
+                <h1 style="font-size: 30px;"><i class='fa fa-text-width' style='font-size:24px'></i> Dynamic</h1>
+                <p style="font-size: medium;">Phluorescently engage worldwide methodolgies with web-enabled technolgy. Interacticely coordinate proactive e-commerce via process centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentiaities.</p>
+                <button class="blow">Procrastinate</button>
+            </article>
+        </div>
+
+        <div class="column">
+            <article class="lower">
+                <h1 style="font-size: 30px;"><i class='fa fa-wrench' style='font-size:24px'></i> Effecient</h1>
+                <p style="font-size: medium;">Phluorescently engage worldwide methodolgies with web-enabled technolgy. Interacticely coordinate proactive e-commerce via process centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentiaities.</p>
+                <button class="blow">Unleash</button>
+            </article>
+        </div>
+
+        <div class="column">
+            <article class="lower">
+                <h1 style="font-size: 30px;"><i class='fa fa-paperclip' style='font-size:24px'></i> Complete</h1>                
+                <p style="font-size: medium;">Phluorescently engage worldwide methodolgies with web-enabled technolgy. Interacticely coordinate proactive e-commerce via process centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentiaities.</p>
+                <button class="blow">Complete</button>
+            </article>
+        </div>
+
+        <div class="column">
+            <article class="lower">
+                <h1 style="font-size: 30px;"><i class='fa fa-camera' style='font-size:24px'></i> Phosfluorescent</h1>
+                <img src="s.jpg" height="100" width="100">
+                <img src="vision.jpg" height="100" width="100">
+                <img src="b.jpg" height="100" width="100">
+                <img src="syn.jpg" height="100" width="100">
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <a href="F:\Bluepineapple Internship\Web Technologies\Session1-HTML\MyInfo.html" class="foot">Terms & Conditions</a>|
+        <a href="F:\Bluepineapple Internship\Web Technologies\Session1-HTML\MyInfo.html" class="foot">Privacy Policy</a>|
+        <a href="F:\Bluepineapple Internship\Web Technologies\Session1-HTML\MyInfo.html" class="foot">Contact</a>
+        <p>Copyright @ Example.com 2015</p>
+    </footer>
+
+</body>
+</html>
