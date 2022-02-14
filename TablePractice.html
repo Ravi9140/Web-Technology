@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Table Practice</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+      table {
+         border-collapse: collapse;
+         width: 100%;
+         border: 2px solid black;
+      }
+   
+      th, td {
+         text-align: left;
+         padding: 16px;
+      }
+
+      tr {
+         border: 2px solid black;
+      }
+
+      .highlight {
+         background-color: rgb(187, 198, 202);
+      }
+
+      caption{
+         text-align: center;
+         background-color: rgb(187, 198, 202);
+         border: 2px solid black;
+         padding: 16px;
+      }
+   </style>
+</head>
+<body>
+     <table >
+        <caption><b>A complex table</b></caption>
+        <tr class="highlight">
+            <th>Invoice #123456789 </td>
+            <td></td>
+            <td></td>
+            <th>14 January 2025</th>
+        </tr>
+        <tr>
+            <td><b>Pay to:</b><br>Acme Billing Co.<br>123 Main St.<br>Cityvilee, NA 12345</td>
+            <td></td>
+            <td><b>Customer:</b><br>John Smith<br>321 Willow Way<br>Southeast Northwestershire, MA 54321</td>
+            <td></td>
+        </tr>
+        <tr class="highlight">
+          <th>Name / Description</th>
+          <th>Qty.</th>
+          <th>@</th>
+          <th>Cost</th>
+        </tr>
+        <tr>
+            <td>Paperclips</td>
+            <td>1000</td>
+            <td>0.01</td>
+            <td>10.00</td>
+        </tr>
+        <tr>
+            <td>Staples (box)</td>
+            <td>100</td>
+            <td>1.00</td>
+            <td>100.00</td>
+         </tr>
+         <tr class="highlight">
+            <th>Subtotal</th>
+            <td></td>
+            <td></td>
+            <td>110</td>
+         </tr>
+         <tr class="highlight">
+            <th>Tax</th>
+            <td></td>
+            <td>8%</td>
+            <td>8.80</td>
+         </tr>
+         <tr class="highlight"> 
+            <th>Grand Total</th>
+            <td></td>
+            <td></td>
+            <td>$118.80</td>
+         </tr>
+      </table> 
+</body>
+</html> 
