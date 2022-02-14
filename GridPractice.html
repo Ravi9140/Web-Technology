@@ -1,0 +1,132 @@
+<!doctype html>
+<title>Example</title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav article ads"
+        "cont cont cont"
+        "footer footer footer";
+    grid-template-rows: 80px 1fr 1fr 70px;  
+    grid-template-columns: 25% 1fr 25%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}  
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    font-size: small;
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "cont"
+      "footer";
+    grid-template-rows: 80px 50vh 30vh 30vh 40vh 70px;  
+    grid-template-columns: 1fr;
+ }
+}
+
+header, footer, article, nav, div {
+  padding: 1.2em;
+  background: rgb(182, 175, 124);
+  text-align: center;
+}
+
+#pageHeader {
+  grid-area: header;
+  }
+
+#pageFooter {
+  grid-area: footer;
+  }
+
+#mainArticle {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 30% 1fr;
+    grid-gap: 5px; 
+    grid-area: article;      
+  }
+
+#mainNav { 
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+    grid-area: nav; 
+}
+
+#siteAds { 
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+    grid-area: ads; 
+} 
+
+#descript {
+    height: 30vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*place-content: start;*/
+    grid-gap: 5px;
+    grid-area: cont;
+}
+
+#mainNav > article {
+    padding: 1.2em;
+    background: rgb(58, 47, 47);
+}
+
+#descript > article {
+    text-align: center;
+    padding: 1.2em;
+    background: rgb(58, 47, 47);
+}
+
+#siteAds > article {
+    padding: 1.2em;
+    background: rgb(58, 47, 47);
+}
+
+#mainArticle > article {
+    padding: 1.2em;
+    background: rgb(58, 47, 47);;
+}
+</style>
+<body>
+    <header id="pageHeader">Header</header>
+    
+    <article id="mainArticle">
+        <article>Pic1</article>
+        <article>Article 1</article>
+        <article>Pic2</article>
+        <article>Article 2</article>
+        <article>Pic3</article>
+        <article>Article 3</article>
+    </article>
+
+    <nav id="mainNav">
+        <article>Article 1</article>
+        <article>Article 2</article>
+    </nav>
+
+    <div id="siteAds">
+        <article>Article 1</article>
+        <article>Article 2</article>     
+    </div>
+
+    <div id="descript">
+        <article>Article 1</article>
+        <article>Article 2</article>
+        <article>Article 3</article>
+        <article>Article 4</article>
+    </div>
+
+    <footer id="pageFooter">Footer</footer>
+</body>
